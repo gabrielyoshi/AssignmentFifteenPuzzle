@@ -91,6 +91,12 @@ class FifteenPuzzle:
         return output
 
     def handle_move(self, from_square: Square | None) -> bool:
+        """ Moves from_square to adjacent empty square.
+        Args:
+            from_square: Square instance representing the square to move
+        Returns:
+            bool: True if move was successful, False otherwise
+        """
         if from_square is not None:
             neighbors = self.get_square_neighbors(from_square)
             for neighbor in neighbors:
